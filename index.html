@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+.topnav a {
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 25px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #E3A8A7;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #E3A8A7;
+  color: white;
+}
+
+.logo{
+  height: 50px;
+  width: 220px;
+  padding: 14px 16px;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("laptops-at-workstations-coding.jpg");
+
+  /* Set a specific height */
+  height: 550px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidenav {
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 300px;
+  background: black;
+  overflow-x: hidden;
+
+}
+
+.sidenav a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+
+.sidenav1 {
+  width: 50px;
+  position: fixed;
+  right: 0px;
+  z-index: 1;
+  top: 300px;
+  background: #E3A8A7;
+  overflow-x: hidden;
+
+}
+
+.sidena1 a {
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+
+
+.sideimage{
+  width: 45px;
+  padding: 2px;
+}
+
+
+.text{
+  font-family: "Abel";
+  padding-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  font-size: 25px;
+  border: solid;
+  border-color: #E3A8A7;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.h1 {
+  font-family: "Abel";
+  color: #E3A8A7;
+  text-align: center;
+  font-size: 25px;
+}
+
+.h2{
+  font-family: "Abel";
+  text-align: center;
+  font-size: 40px;
+}
+
+.blearn{
+  display: flex;
+  justify-content: center;
+  margin-left: 250px;
+}
+
+.bt_learn{
+  font-family: "Abel";
+  font-size: 25px;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+  margin-right: 250px;
+  size: 50px;
+  background-color: #E3A8A7;
+
+}
+
+.program{
+  display: flex;
+  justify-content: row;
+  padding: 75px;
+  background-color: #EFDADF;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.parallax1 {
+  /* The image used */
+  background-image: url("image_1.jpeg");
+  background-size: 60%;
+
+  /* Set a specific height */
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+
+  padding: 320px;
+  margin-right: 40px;
+}
+
+#image_1{
+  width: 45%;
+  padding-right: 0px;
+}
+
+.p_text{
+  font-family: "Abel";
+  font-size: 25px;
+}
+
+.topicon{
+  display: flex;
+  justify-content: center;
+}
+
+.three_icon{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  height: 500px;
+  width: 1000px;
+}
+
+.icons{
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding: 20px;
+}
+
+#icon1{
+  width: 125px;
+}
+
+#icon2{
+  width: 125px;
+}
+
+#icon3{
+  width: 125px;
+}
+
+#icontext1{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Abel";
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+#icontext2{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Abel";
+  font-size: 25px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+#icontext3{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Abel";
+  font-size: 25px;
+  margin-right: 50px;
+}
+
+.icontext{
+  font-size: 20px;
+}
+
+.levels{
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+
+.level_content{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.level1{
+  display: flex;
+  flex-direction: row;
+}
+
+.check-mark{
+  height: 40px;
+
+}
+
+.interested{
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+
+
+
+.faq{
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.accordion {
+  background-color: #EFDADF;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 20px;
+  font-family: "Abel";
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #E3A8A7;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+  font-family: "Abel";
+  font-size: 20px;
+}
+
+.footer{
+  background-color: black;
+  margin-top: 50px;
+}
+
+.stats{
+  background-color: #EFDADF;
+  font-family: "Abel";
+  padding-left: 100px;
+  padding-right: 70px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 100px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="topnav" class="header" id="myHeader">
+  <img class="logo" src="Black_Logo.png"/>
+  <a onclick="topFunction3()" id="myBtn3" title="Go to top" class="active" href="#home">Home</a>
+  <a onclick="topFunction1()" id="myBtn1" title="Go to top" href="#news">FAQ</a>
+  <a onclick="topFunction2()" id="myBtn2" title="Go to top" href="#contact">Levels</a>
+  <a onclick="topFunction()" id="myBtn" title="Go to top"  href="#about">About</a>
+</div>
+
+<div class="parallax">
+</div>
+
+<div class="sidenav">
+  <a href="https://www.facebook.com/pg/GirlPlex/ads/?ref=page_internal"><img class="sideimage" src="facebook2.png"></a>
+  <a href="https://www.instagram.com/girlplex/"><img class="sideimage" src="insta2.png"></a>
+  <a href="#youtube"><img class="sideimage" src="youtube.png"></a>
+</div>
+
+<div class="sidenav1">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4__3XgQ9v_4sLSge6IofLYjOySIWACn4sC0ukTns7nZ-1Zw/viewform?usp=sf_link"><img class="sideimage" src="Apply.png"></a>
+</div>
+
+<div class="text">
+  <h1 class="h1">Who We Are</h1>
+  <h2 class="h2">Interested in Computer Science and coding?</h2>
+  <p>GirlPlex is coding summer camp for girls from grades 6 through 8. Over the course of two weeks, girls learn how to create their own websites, using languages such as Ruby, HTML, CSS, and JavaScript.</p>
+  <div class="blearn">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4__3XgQ9v_4sLSge6IofLYjOySIWACn4sC0ukTns7nZ-1Zw/viewform?usp=sf_link" class="bt_learn">Apply</a>
+  </div>
+</div>
+
+<div class="program">
+  <div class="parallax1">
+  </div>
+  <div class= "prtext">
+    <h1 class="h1" style="padding-top:40px; display: flex; justify-content: left;">Program</h1>
+    <h2 class="h2" style="padding-right: 50px; font-size: 35px;">Closing the gender gap, one girl at a time.</h2>
+    <p class="p_text" style="padding-right: 50px"> GirlPlex is focused on closing the gender gap in computer science. Currently, women are very underrepresented in computer science fields. GirlPlex aims to educated girls in computer science from middle school, so they will be more likely to pursue computer science fields in high school.</p>
+    <div class="learn">
+    <a onclick="topFunction4()" id="myBtn4" title="Go to top" class="bt_learn" style="display: flex; justify-content: right;">Learn More</a>
+    </div>
+  </div>
+</div>
+
+<div class="topicon">
+  <div class="icons">
+  <div class="three_icon" style="text-align: center;">
+    <div id="icontext1">
+      <img id="icon1" src="icons8-code-file-64.png">
+      <p>Javascript</p>
+      <p class="icontext">JavaScript is a client-scripting language used in web development. It can be used as either a front-end or back-end language. </p>
+    </div>
+    <div id="icontext2">
+      <img id="icon2" src="icons8-google-code-80.png">
+      <p>HTML and CSS</p>
+      <p class="icontext">HTML and CSS are front-end languages used to design web pages. They are essential languages to creating websites.</p>
+    </div>
+    <div id="icontext3">
+      <img id="icon3" src="icons8-code-64.png">
+      <p>Ruby</p>
+      <p class="icontext">Ruby is object-oriented coding language that can be used as a backend language. It can be used to create dynamic websites.</p>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="stats">
+  <div style="padding-right: 20px">
+    <h1>Statistics of Girls in Technology</h1>
+    <p class="p-text" style="font-size:20px">There is a projected growth of females in computer science by 15-20% from 2012-2022, however, even with this growth most of the computer science jobs will be held by men. As more STEM careers are added everyday, the clear absence of females is notable.</p>
+    <p class="p-text" style="font-size:20px">There is a miscommunication between the computer science industry and the message girls recieve about being successful in tech. GirlPlex strives to change that and help girls become more confident in the technology industry.</p>
+  </div>
+  <div>
+    <img style="width:700px;" src="Stats.png">
+  </div>
+</div>
+
+
+<div class="levels">
+  <h1 class="h2" style="display:flex; justify-content: left;">Camp Levels</h1>
+  <p class="p_text">This year we are excited to announce that we will be holding two levels!</p>
+  <div class="level_content">
+  <div class="column" style="padding-right:200px;">
+    <h1 class="p_text">Level 1: New Scholars</h1>
+    <div class="level1">
+    <img class="check-mark" src="check-mark.png">
+    <p class="p_text" style="font-size:20px;">Level 1 is open to all new applicants.</p>
+    </div>
+    <div class="level1">
+    <img class="check-mark" src="check-mark.png">
+    <p class="p_text" style="font-size:20px;">The Level 1 curicculum consists of Ruby, HTML, and CSS.</p>
+    </div>
+  </div>
+ <div class="column">
+   <h1 class="p_text">Level 2: Returning Scholars</h1>
+   <div class="level1">
+   <img class="check-mark" src="check-mark.png">
+   <p class="p_text" style="font-size:20px;">Level 2 is open to returning scholars.</p>
+   </div>
+   <div class="level1">
+   <img class="check-mark" src="check-mark.png">
+   <p class="p_text" style="font-size:20px;">Level 2 curriculum consists of JavaScript, HTML, and CSS.</p>
+   </div>
+ </div>
+ </div>
+</div>
+
+<div class="faq">
+<h1 class="h2" style="display:flex; justify-content: left;">FAQ</h1>
+<button class="accordion">Who can apply?</button>
+<div class="panel">
+  <p>All female-identifying students entering grades 7th to 9th grade may apply!</p>
+</div>
+
+<button class="accordion">How much does the camp cost?</button>
+<div class="panel">
+  <p>The camp is completely FREE. Thanks to our amazing sponsors and the Downingtown Library, all of our students are able to attend at no cost.</p>
+</div>
+
+<button class="accordion">Do you need previous experience to apply?</button>
+<div class="panel">
+  <p>Nope. We have two levels of classes. The level one and level two. Our level one camp is dedicated to beginners who will be taught the basics of HTML, CSS, and Ruby. The level two camp is for students who have been a part of our camp last year or already completed courses in the three other languages.</p>
+</div>
+
+<button class="accordion">What is the application deadline?</button>
+<div class="panel">
+  <p>The deadline for the application is due May 10th. Please contact us if you have any problems.</p>
+</div>
+
+<button class="accordion">What coding languages are taught at camp?</button>
+<div class="panel">
+  <p>This year we have two levels of camps. In our level one camp, students will learn HTML, CSS, and Ruby. Level two will teach Javascript and more advanced HTML topics to enhance your websites.</p>
+</div>
+
+<button class="accordion">Will there be any other advisors?</button>
+<div class="panel">
+  <p>This camp is held at Downingtown Library where we will have the guidance of our friendly librarians. We will also have multiple guest visitors who will talk to campers about how to get involved and their own experiences with computer science.</p>
+</div>
+
+<button class="accordion">If I am selected, will I have to attend the whole camp?</button>
+<div class="panel">
+  <p>Yes. As we have limited spots and funding, we need to make sure all campers will be able to completely attend both weeks of the camp for the whole time.</p>
+</div>
+
+<button class="accordion">Do I need to bring my own computer?</button>
+<div class="panel">
+  <p>Unfortunately, yes. We cannot provide students with computers. However, if you have any problems with this contact us and we can try to make arrangements.</p>
+</div>
+
+<button class="accordion">Do we only code during the camp?</button>
+<div class="panel">
+  <p>No! During the course of the camp, students are engaged in multiple arranged fun activities. Even while coding, we tend to have fun. Don’t forget, we even have snacks.</p>
+</div>
+
+</div>
+
+<div class="footer">
+  <footer>
+    <h2 style="color:white; font-size:20px; font-family: Abel; padding-top: 10px; display:flex; justify-content: center;">WITH THANKS TO:</h2>
+    </footer>
+  <img style="margin-left: 50px; height:60px;"src="DowningtownLibrary.png">
+  <footer class="h1">GIRLPLEX</footer>
+  <footer style="padding:10px;font-size:20px;font-family:Abel; color:white; display:flex; justify-content:center;">girlplexco@gmail.com</footer>
+  <footer style="padding:10px;font-size:20px;font-family:Abel; color:white; display:flex; justify-content:center;">(484)-472-2112</footer>
+</div>
+<script src="./index.js"></script>
+
+</body>
+</html>
